@@ -5,6 +5,31 @@
     <title>Positioning</title>
 </head>
 <body>
+<div style="width: 200px; height: 200px; background-color: red; color: white">
+    <h3>position: static</h3>
+</div>
+<div style="width: 200px; height: 200px; background-color: blue; color: white; position: relative; top: 100px">
+    <h3>position: relative</h3>
+</div>
+<div style="width: 200px; height: 200px; background-color: green; color: white; position: absolute; top: 100px; left: 150px">
+    <h3>position: absolute</h3>
+</div>
+<div style="width: 200px; height: 200px; background-color: aqua; color: white; position: fixed; top: 150px; left: 170px">
+    <h3>position: fixed</h3>
+</div>
 
+<div style="position: absolute; top: 570px">
+    <-- position -->
+    <p style="color: red">static - по умолчанию (left, top, right и bottom не работают)</p>
+    <p style="color: blue">relative - отступы от предидущего елемента </p>
+    <p style="color: green">absolute - отступы от края страницы. Перекрывает елементы</p>
+    <p style="color: aqua">fixed - отступы от края страницы. Остается на месте даже при скроллинге</p>
+
+    <br>
+
+    <-- display: block or inline -->
+    <p>block - new line</p>
+    <p>inline - the same line</p>
+</div>
 </body>
 </html>
