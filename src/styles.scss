@@ -1,0 +1,61 @@
+// Переменные
+$mainColor: green;
+
+body {
+  color: $mainColor;
+}
+
+// Вложенность
+#A {
+  color: red;
+
+  #B {
+    color: green;
+
+    #C p {
+      color: blue;
+    }
+  }
+}
+
+// Амперсанд
+/*
+То же самое что
+a {font-weight: bold;}
+a:hover {color: red;}
+ */
+a {
+  font-weight: bold;
+
+  &:hover {
+    color: red;
+  }
+}
+
+// Миксины
+@mixin myFirstMixin($inputColor){
+  color: $inputColor;
+}
+.myFirstMixin {
+  @include myFirstMixin(gray);
+}
+
+// Пример написания функции с дерективами
+@function pow ($number, $exp) {
+  $value: 1;
+  @if $exp > 0 {
+    @for $i from 1 through $exp {
+      $value: $value * $number;
+    }
+  }
+  @else if $exp < 0 {
+    @for $i from 1 through -$exp {
+      $value: $value / $number;
+    }
+  }
+  @return $value;
+}
+
+.classForCallFunction {
+  font-size: pow(2,5) + px;
+}

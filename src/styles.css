@@ -1,0 +1,28 @@
+@charset "UTF-8";
+body {
+  color: green; }
+
+#A {
+  color: red; }
+  #A #B {
+    color: green; }
+    #A #B #C p {
+      color: blue; }
+
+/*
+То же самое что
+a {font-weight: bold;}
+a:hover {color: red;}
+ */
+a {
+  font-weight: bold; }
+  a:hover {
+    color: red; }
+
+.myFirstMixin {
+  color: gray; }
+
+.classForCallFunction {
+  font-size: 32px; }
+
+/*# sourceMappingURL=styles.css.map */
